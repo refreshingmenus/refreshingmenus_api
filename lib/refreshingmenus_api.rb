@@ -1,4 +1,4 @@
-# require 'refreshingmenus_api/version'
+require 'refreshingmenus_api/version'
 
 require 'httparty'
 require 'active_support/core_ext'
