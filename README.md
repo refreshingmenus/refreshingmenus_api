@@ -46,6 +46,14 @@ Because sometimes multiple places have the same phone number we can do more spec
         :phone => place.phone_number # Eg. '010-12341234'. 
       )
 
+## Widget usage
+
+    RefreshingmenusApi::Widget.tag(:place_id => 'some_place_id', :widget_token => 'some_token')
+
+This will result in a script tag like:
+
+    <script id='rm-menuwidget' src='http://www.refreshingmenus.com/api/v1/widget.js?dom_id=rm-menuwidget&place_id=some_place_id&widget_token=some_token'></script>"
+
 ## Contributing
 
 1. Fork it

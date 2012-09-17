@@ -1,4 +1,5 @@
 require 'refreshingmenus_api/version'
+require 'refreshingmenus_api/widget'
 
 require 'httparty'
 require 'active_support/core_ext'
@@ -28,6 +29,9 @@ module RefreshingmenusApi
 
     attr_reader :auth_token, :version, :format
 
+    # Options:
+    # * :auth_token - Your RefreshingMenus Authentication token (API)
+    # * :version - Version (defaults to 1)
     def initialize(options = {})
       @auth_token = options[:auth_token]
       @version = options[:version] || '1'
