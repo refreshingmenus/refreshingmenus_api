@@ -1,6 +1,6 @@
 # RefreshingmenusApi
 
-Ruby API to use the Refreshing Menus REST API.
+Ruby API to use the Refreshing Menus REST API and Javascript Widget.
 
 ## Installation
 
@@ -48,11 +48,21 @@ Because sometimes multiple places have the same phone number we can do more spec
 
 ## Widget usage
 
-    RefreshingmenusApi::Widget.tag(:place_id => 'some_place_id', :widget_token => 'some_token')
+    RefreshingmenusApi::Widget.script_tag(:place_id => 'some_place_id', :widget_token => 'some_token')
 
 This will result in a script tag like:
 
     <script id='rm-menuwidget' src='http://www.refreshingmenus.com/api/v1/widget.js?dom_id=rm-menuwidget&place_id=some_place_id&widget_token=some_token'></script>"
+
+If you just want the src of the script use:
+
+    RefreshingmenusApi::Widget.script_src(:place_id => 'some_place_id', :widget_token => 'some_token')
+    # => "http://www.refreshingmenus.com/api/v1/widget.js?dom_id=rm-menuwidget&place_id=some_place_id&widget_token=some_token"
+
+Other supported options:
+
+* locale - the language of the menu and other texts (disclaimer), defaults to 'nl'.
+* style - the CSS style to apply, defaults to 'default'. Use 'none' if you don't want any style to be applied and you include your own.
 
 ## Contributing
 
