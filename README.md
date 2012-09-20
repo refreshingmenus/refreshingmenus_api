@@ -2,6 +2,8 @@
 
 Ruby API to use the Refreshing Menus REST API and Javascript Widget.
 
+RefreshingMenus offers publishers free access to a database of thousands of restaurant menus in (mostly) European countries (Netherlands, Belgium, France, Germany, ..). For more information see http://www.refreshingmenus.com.
+
 ## Installation
 
 Add this line to your application's Gemfile:
